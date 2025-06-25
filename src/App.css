@@ -1,38 +1,170 @@
-.App {
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*===== Variable Define =====*/
+:root {
+  --primary-color: #1b2e35;
+  --secondry-color: #8e5093;
+  --white-color: #fff;
+  --gray-color: #ffffffa1;
+  --black-color: #0a0a0a;
+}
+body{
+  background-image: url(https://images.unsplash.com/photo-1578364249730-0c4ee16426fa?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  height: 100%;
+  width: 100%;
+}
+.todo-back {
+  /* background: #ffffff; */
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 500px;
+ 
+  /* border-radius: 16px; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.main-text {
   text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  color: white;
+   font-weight: bolder;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.todo-form .form-group {
+ display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.form-control {
+  flex: 5;
+  gap: 5;
+  padding: 10px;
+  font-size: 1rem;
+  /* border-radius: 8px; */
+  border: 1px solid #ccc;
+}
+
+.add-btn {
+  padding: 10px 16px;
+  background-color: #0a58ca;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+  
+}
+
+.add-btn:hover {
+  background-color: yellowgreen;
+}
+
+.task-list {
+  list-style: none;
+  margin-top: 1.5rem;
+  padding: 0;
+}
+
+@media (max-width: 500px) {
+  .form-group {
+    flex-direction: column;
   }
+
+  .add-btn {
+    width: 50%;
+    margin: 20px auto 0 auto; /* top margin + auto left/right */
+    display: block; /* make sure button behaves like block-level */
+
+  }
+  .check-btn,.delete-btn{
+    padding: 3px 6px;
+    margin-top: 30px;
+  }
+  
+}
+.myUnorderList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.myUnorderList li {
+  display: flex;          /* Make contents flex row */
+  align-items: center;    /* Vertically center buttons */
+              /* Optional spacing between buttons */
+  margin-top: 20px; 
+ 
+  border-radius: 8px;
+}
+.task-text {
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color:white;
+ 
+}
+.btn-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px; /* spacing between buttons */
+}
+
+.check-btn{
+   padding: 8px 12px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: green;
+   color: white;
+   gap: 4;
+   /* gap: 20px; */
+
+
+}
+.delete-btn {
+  padding: 8px 12px;
+  border: none;
+ border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  background-color: red;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 25px;
+  
+}
+.my-button{
+    color: white;
+    background-color:#d9030f;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+}
+.my-button:hover{
+  background-color: white;
+  color:#d9030f ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
